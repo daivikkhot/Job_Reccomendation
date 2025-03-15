@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Edit Job Listing</title>
+</head>
+<body>
+    <h2>Edit Job Listing</h2>
+    <form method="POST">
+        <label for="job_title">Job Title:</label>
+        <input type="text" id="job_title" name="job_title" value="{{ job.job_title }}" required><br>
+
+        <label for="company_name">Company Name:</label>
+        <input type="text" id="company_name" name="company_name" value="{{ job.company_name }}" required><br>
+
+        <label for="location">Location:</label>
+        <input type="text" id="location" name="location" value="{{ job.location }}" required><br>
+
+        <label for="job_type">Job Type:</label>
+        <input type="text" id="job_type" name="job_type" value="{{ job.job_type }}" required><br>
+
+        <label for="required_skills">Required Skills:</label>
+        <input type="text" id="required_skills" name="required_skills" value="{{ job.required_skills }}" required><br>
+
+        <label for="degrees">Degrees:</label>
+        <input type="text" id="degrees" name="degrees" value="{{ job.degrees }}" required><br>
+
+        <label for="experience_level">Experience Level:</label>
+        <input type="text" id="experience_level" name="experience_level" value="{{ job.experience_level }}" required><br>
+
+        <label for="job_description">Job Description:</label>
+        <textarea id="job_description" name="job_description" required>{{ job.job_description }}</textarea><br>
+
+        <input type="submit" value="Save Changes">
+    </form>
+    <a href="{{ url_for('all_jobs') }}">Cancel</a>
+</body>
+</html>

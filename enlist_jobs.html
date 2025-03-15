@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Enlist Jobs</title>
+</head>
+<body>
+    <h2>Enlist a New Job</h2>
+    <form action="{{ url_for('enlist_jobs') }}" method="POST">
+        <label for="job_title">Job Title:</label>
+        <input type="text" id="job_title" name="job_title" required><br>
+
+        <label for="company_name">Company Name:</label>
+        <input type="text" id="company_name" name="company_name" required><br>
+
+        <label for="location">Location (Remote/On-Site):</label>
+        <input type="text" id="location" name="location" required><br>
+
+        <label for="job_type">Job Type:</label>
+        <select id="job_type" name="job_type" required>
+            <option value="Full-Time">Full-Time</option>
+            <option value="Part-Time">Part-Time</option>
+            <option value="Internship">Internship</option>
+        </select><br>
+
+        <label for="required_skills">Required Skills:</label>
+        <input type="text" id="required_skills" name="required_skills" required><br>
+
+        <label for="degrees">Required/Useful Degrees:</label>
+        <input type="text" id="degrees" name="degrees" required><br>
+
+        <label for="experience_level">Experience Level:</label>
+        <select id="experience_level" name="experience_level" required>
+            <option value="Fresher">Fresher</option>
+            <option value="Experienced">Experienced</option>
+        </select><br>
+
+        <label for="job_description">Job Description:</label>
+        <textarea id="job_description" name="job_description" required></textarea><br>
+
+        <input type="submit" value="Enlist Job">
+    </form>
+</body>
+</html>
